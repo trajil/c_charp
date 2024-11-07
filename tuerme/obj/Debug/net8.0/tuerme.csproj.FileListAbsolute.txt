@@ -1,0 +1,15 @@
+C:\Projekte\c_charp\tuerme\bin\Debug\net8.0\tuerme.exe
+C:\Projekte\c_charp\tuerme\bin\Debug\net8.0\tuerme.deps.json
+C:\Projekte\c_charp\tuerme\bin\Debug\net8.0\tuerme.runtimeconfig.json
+C:\Projekte\c_charp\tuerme\bin\Debug\net8.0\tuerme.dll
+C:\Projekte\c_charp\tuerme\bin\Debug\net8.0\tuerme.pdb
+C:\Projekte\c_charp\tuerme\obj\Debug\net8.0\tuerme.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projekte\c_charp\tuerme\obj\Debug\net8.0\tuerme.AssemblyInfoInputs.cache
+C:\Projekte\c_charp\tuerme\obj\Debug\net8.0\tuerme.AssemblyInfo.cs
+C:\Projekte\c_charp\tuerme\obj\Debug\net8.0\tuerme.csproj.CoreCompileInputs.cache
+C:\Projekte\c_charp\tuerme\obj\Debug\net8.0\tuerme.sourcelink.json
+C:\Projekte\c_charp\tuerme\obj\Debug\net8.0\tuerme.dll
+C:\Projekte\c_charp\tuerme\obj\Debug\net8.0\refint\tuerme.dll
+C:\Projekte\c_charp\tuerme\obj\Debug\net8.0\tuerme.pdb
+C:\Projekte\c_charp\tuerme\obj\Debug\net8.0\tuerme.genruntimeconfig.cache
+C:\Projekte\c_charp\tuerme\obj\Debug\net8.0\ref\tuerme.dll
