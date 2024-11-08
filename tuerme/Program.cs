@@ -16,9 +16,28 @@
         AutoSolveHanoi(n - 1, ref counter, y, x, z);
 
     }
-    static void ChooseMethod()
+    static int ChooseGameType(int gameType)
     {
+        Console.WriteLine("Do you want to play the game (1) or see it getting autosolved (2)?");
+        string input = "";
+        bool notAnInt = true, intNotInRange = true;
 
+        // forcing valid integer input from user
+        while (notAnInt && intNotInRange)
+        {
+            input = Console.ReadLine();
+            try
+            {
+                gameType = Convert.ToInt32(input);
+                gameType >=1 || gameType <= 2 ?
+                notAnInt = false;
+            }
+            catch (FormatException)
+            {
+                Console.WriteLine("Invalid input. Please enter an integer.");
+            }
+        }
+        return gameType;
     }
     static int SetAmountOfDisks(int n)
     {
@@ -90,12 +109,24 @@
 
         do
         {
-            int n = 1, counter = 0;
-
+            int n = 1, counter = 0, gameType = 1;
             n = SetAmountOfDisks(n);
-            Console.WriteLine("Path to completing the towers: ");
-            AutoSolveHanoi(n, ref counter, 'A', 'B', 'C');
-            Console.WriteLine($"Amout of turns needed: {counter}");
+            gameType = ChooseGameType(gameType);
+
+            // path: Playing
+            if (gameType == 1)
+            {
+
+            }
+
+            // path: Autosolving
+            else if (gameType == 2)
+            {
+                Console.WriteLine("Path to completing the towers: ");
+                AutoSolveHanoi(n, ref counter, 'A', 'B', 'C');
+                Console.WriteLine($"Amout of turns needed: {counter}");
+            }
+
             playerWantsToContinue = AskPlayerForReplay(playerWantsToContinue);
         } while (playerWantsToContinue);
     }
