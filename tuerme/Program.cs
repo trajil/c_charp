@@ -23,18 +23,26 @@
         bool notAnInt = true, intNotInRange = true;
 
         // forcing valid integer input from user
-        while (notAnInt && intNotInRange)
+        while (notAnInt || intNotInRange)
         {
             input = Console.ReadLine();
             try
             {
                 gameType = Convert.ToInt32(input);
-                gameType >=1 || gameType <= 2 ?
+                if (gameType >= 1 && gameType <= 2)
+                {
+                    intNotInRange = false;
+                }
                 notAnInt = false;
             }
             catch (FormatException)
             {
                 Console.WriteLine("Invalid input. Please enter an integer.");
+                continue;
+            }
+            if (intNotInRange)
+            {
+                Console.WriteLine("Invalid input. Please enter a valid integer (1 or 2).");
             }
         }
         return gameType;
