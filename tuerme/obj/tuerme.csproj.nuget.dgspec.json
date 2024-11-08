@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Projekte\\c_charp\\tuerme\\tuerme.csproj": {}
+    "c:\\Projekte\\c_charp\\tuerme\\tuerme.csproj": {}
   },
   "projects": {
-    "C:\\Projekte\\c_charp\\tuerme\\tuerme.csproj": {
+    "c:\\Projekte\\c_charp\\tuerme\\tuerme.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projekte\\c_charp\\tuerme\\tuerme.csproj",
+        "projectUniqueName": "c:\\Projekte\\c_charp\\tuerme\\tuerme.csproj",
         "projectName": "tuerme",
-        "projectPath": "C:\\Projekte\\c_charp\\tuerme\\tuerme.csproj",
+        "projectPath": "c:\\Projekte\\c_charp\\tuerme\\tuerme.csproj",
         "packagesPath": "C:\\Users\\Student\\.nuget\\packages\\",
-        "outputPath": "C:\\Projekte\\c_charp\\tuerme\\obj\\",
+        "outputPath": "c:\\Projekte\\c_charp\\tuerme\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

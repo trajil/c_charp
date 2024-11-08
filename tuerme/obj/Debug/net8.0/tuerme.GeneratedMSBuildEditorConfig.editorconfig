@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = tuerme
-build_property.ProjectDir = C:\Projekte\c_charp\tuerme\
+build_property.ProjectDir = c:\Projekte\c_charp\tuerme\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
