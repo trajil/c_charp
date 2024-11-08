@@ -1,5 +1,6 @@
 ﻿class Tuerme
 {
+    public static char[,] map;
     static void AutoSolveHanoi(int n, ref int counter, char x, char y, char z)
     {
         if (n == 1)
@@ -28,7 +29,8 @@
             input = Console.ReadLine();
             try
             {
-                gameType = Convert.ToInt32(input);
+                // gameType = Convert.ToInt32(input);
+                bool successfullyParsed = int.TryParse(input, out gameType);
                 if (gameType >= 1 && gameType <= 2)
                 {
                     intNotInRange = false;
@@ -64,7 +66,8 @@
                 input = Console.ReadLine();
                 try
                 {
-                    n = Convert.ToInt32(input);
+                    bool successfullyParsed = int.TryParse(input, out n);
+                    
                     notAnInt = false;
                 }
                 catch (FormatException)
@@ -124,7 +127,7 @@
             // path: Playing
             if (gameType == 1)
             {
-
+                
             }
 
             // path: Autosolving
