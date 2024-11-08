@@ -1,6 +1,34 @@
 ﻿class Tuerme
 {
-    public static char[,] map;
+    public static char[,] map = { { 'o', 'i' }, { 'o', 'i' }, { 'o', 'i' } };
+    public static char blank = ' ', pillar = '|', floor = '=';
+
+    static void GenerateMap(int size)
+    {
+        // 5 times 3 is the minimal size for the map
+        int rowLength = 5 + 6 * size;
+        int colLength = 3 + size;
+    }
+    static void FillMap()
+    {
+        
+    }
+    static void RenderMap()
+    {
+        int rowLength = map.GetLength(0);
+        int colLength = map.GetLength(1);
+
+        for (int i = 0; i < rowLength; i++)
+        {
+            for (int j = 0; j < colLength; j++)
+            {
+                Console.Write(string.Format("{0} ", map[i, j]));
+            }
+            Console.Write(Environment.NewLine + Environment.NewLine);
+        }
+    }
+
+
     static void AutoSolveHanoi(int n, ref int counter, char x, char y, char z)
     {
         if (n == 1)
@@ -67,7 +95,7 @@
                 try
                 {
                     bool successfullyParsed = int.TryParse(input, out n);
-                    
+
                     notAnInt = false;
                 }
                 catch (FormatException)
@@ -127,7 +155,7 @@
             // path: Playing
             if (gameType == 1)
             {
-                
+
             }
 
             // path: Autosolving
@@ -137,7 +165,9 @@
                 AutoSolveHanoi(n, ref counter, 'A', 'B', 'C');
                 Console.WriteLine($"Amout of turns needed: {counter}");
             }
-
+            //GenerateMap(n);
+            //FillMap();
+            RenderMap();
             playerWantsToContinue = AskPlayerForReplay(playerWantsToContinue);
         } while (playerWantsToContinue);
     }
