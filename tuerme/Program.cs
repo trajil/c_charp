@@ -1,31 +1,40 @@
 ﻿class Tuerme
 {
-    public static char[,] map = { { 'o', 'i' }, { 'o', 'i' }, { 'o', 'i' } };
+    public static char[,] map;
     public static char blank = ' ', pillar = '|', floor = '=';
+    public static int mapHeight, mapWidth;
+
 
     static void GenerateMap(int size)
     {
-        // 5 times 3 is the minimal size for the map
-        int rowLength = 5 + 6 * size;
-        int colLength = 3 + size;
+        // int size = 3;
+        mapWidth = 2 + 3 * (3 + 2 * size);
+        mapHeight = 3 + size;
+        map = new char[mapHeight, mapWidth];
+
+        for (int i = 0; i < mapHeight; i++)
+        {
+            for (int j = 0; j < mapWidth; j++)
+            {
+                map[i, j] = floor;
+            }
+        }
     }
     static void FillMap()
     {
-        
+
     }
     static void RenderMap()
     {
-        int rowLength = map.GetLength(0);
-        int colLength = map.GetLength(1);
-
-        for (int i = 0; i < rowLength; i++)
+        for (int i = 0; i < mapHeight; i++)
         {
-            for (int j = 0; j < colLength; j++)
+            for (int j = 0; j < mapWidth; j++)
             {
-                Console.Write(string.Format("{0} ", map[i, j]));
+                Console.Write(map[i, j]);
             }
-            Console.Write(Environment.NewLine + Environment.NewLine);
+            Console.WriteLine();
         }
+        Console.WriteLine();
     }
 
 
@@ -152,6 +161,9 @@
             n = SetAmountOfDisks(n);
             gameType = ChooseGameType(gameType);
 
+            GenerateMap(n);
+            //FillMap();
+            RenderMap();
             // path: Playing
             if (gameType == 1)
             {
@@ -165,9 +177,6 @@
                 AutoSolveHanoi(n, ref counter, 'A', 'B', 'C');
                 Console.WriteLine($"Amout of turns needed: {counter}");
             }
-            //GenerateMap(n);
-            //FillMap();
-            RenderMap();
             playerWantsToContinue = AskPlayerForReplay(playerWantsToContinue);
         } while (playerWantsToContinue);
     }
